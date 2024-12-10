@@ -1,0 +1,110 @@
+/* Загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #c5e0f8; /* Легкий блакитний фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Карточка */
+.card {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Трохи прозора картка для контрасту */
+    padding: 50px; /* Збільшено відстань між текстом та краями картки */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+    z-index: 2; /* щоб картка була поверх сніжинок */
+}
+
+/* Заголовок */
+.card__title {
+    font-size: 3rem;
+    color: #ff5733;
+    margin-bottom: 20px;
+}
+
+/* Повідомлення */
+.card__message {
+    font-size: 1.5rem;
+    color: #28a745;
+    margin-bottom: 30px;
+}
+
+/* Картинки ялинок зліва та справа */
+.card__tree-left, .card__tree-right {
+    position: absolute;
+    top: 20%; /* Збільшена відстань від верхнього краю картки */
+    width: 300px;
+    height: 300px;
+    animation: bounce 3s infinite alternate; /* Ефект підстрибування для ялинки */
+}
+
+.card__tree-left {
+    left: -80%; /* Відстань від лівого краю */
+}
+
+.card__tree-right {
+    right: -80%; /* Відстань від правого краю */
+}
+
+.tree-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Анімація підстрибування для ялинки */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-40px); }
+}
+
+/* Кнопка */
+.card__button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+    background-color: #e74c3c;
+}
+
+/* Сніжинки */
+.snowflake {
+    position: absolute;
+    top: -10px; /* Початкова позиція сніжинки */
+    font-size: 3rem; /* Збільшений розмір сніжинок */
+    color: #2600ff; /* Білий колір */
+    opacity: 0.9; /* Більша прозорість */
+    pointer-events: none;
+    animation: fall 10s linear infinite; /* Тільки падіння */
+}
+
+/* Анімація падіння сніжинок */
+@keyframes fall {
+    0% {
+        transform: translateY(-10px); /* Початкове положення сніжинки */
+    }
+    100% {
+        transform: translateY(100vh); /* Сніжинка рухається вниз до низу екрану */
+    }
+}
