@@ -1,0 +1,137 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #c2bfbf;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.planner {
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.week-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.week-info input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.week-info label {
+    font-size: 14px;
+    color: #666;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: repeat(3, 1fr); /* Всі ряди однакової висоти */
+    gap: 15px;
+    margin-top: 20px;
+    height: 600px; /* Фіксована висота для симетрії */
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.sidebar textarea {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    background-color: #f9f9f9;
+}
+
+.day {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.day h2 {
+    font-size: 20px;
+    color: #555;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+textarea {
+    width: 95%;
+    height: 100px; /* Фіксована висота, щоб текст не вилазив */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    background-color: #f9f9f9;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    transform: scale(1.2);
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
