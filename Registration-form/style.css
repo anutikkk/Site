@@ -1,0 +1,108 @@
+/* Загальні стилі */
+body {
+    background: linear-gradient(to bottom, #d1f5c0, #9ec9f1); /* Градієнт для фону */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Контейнер форми */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Стиль форми */
+.registration-form {
+    background: linear-gradient(145deg, #ffffff, #f0e4d7); /* Градієнт для форми */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Тінь для форми */
+    text-align: center;
+    width: 350px;
+}
+
+/* Заголовок форми */
+.registration-form h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #5a3d2b; /* Темний відтінок дерева */
+}
+
+/* Група форми */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Стиль полів введення */
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"] {
+    width: 90%;
+    padding: 12px 15px;
+    border: 1px solid #93fc90; /* Темно-коричневий колір */
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.registration-form input[type="text"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="tel"]:focus,
+.registration-form input[type="password"]:focus {
+    border-color: #5a3d2b; /* Темніший коричневий */
+}
+
+/* Підказка для паролю */
+.password-rules {
+    font-size: 12px;
+    color: #888888; /* Світло-сірий колір */
+    margin-top: 5px;
+    text-align: left;
+}
+
+/* Повідомлення про помилку */
+.error-message {
+    display: block;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #ffcccc; /* Світло-червоний фон */
+    color: #d8000c; /* Червоний колір тексту */
+    border: 1px solid #d8000c; /* Червона рамка */
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Кнопка */
+.submit-btn {
+    background-color: #9dfaaa; /* Темно-коричневий колір */
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для кнопки */
+}
+
+.submit-btn:hover {
+    background-color: #5a3d2b; /* Зміна кольору на наведенні */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Посилення тіні на наведенні */
+}
+
+/* Текст внизу */
+.footer-text {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #5a3d2b;
+}
