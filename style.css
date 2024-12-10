@@ -1,0 +1,281 @@
+/* Основні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b0e4f8;
+}
+
+header {
+    background-color: #ffffff;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Секції */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Темніший фон для секцій Практичні роботи та Лабораторні роботи */
+.dark-background {
+    background-color: #e9ecef;
+}
+
+/* Контейнер карток */
+.laba-tasks, .practical-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.laba-task, .practical-task {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.laba-task img, .practical-task img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.laba-task .task-info, .practical-task .task-info {
+    flex-grow: 1;
+}
+
+.laba-task h4, .practical-task h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.laba-task p, .practical-task p {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.laba-task .button, .practical-task .button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.laba-task .button:hover, .practical-task .button:hover {
+    background-color: #0056b3;
+    transition: 0.3s;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Соціальні іконки */
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 40px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    transition: 0.3s;
+}
+
+/* Секція "Про мене" */
+#about {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер для фото та тексту */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* Фото в секції "Про мене" */
+.about-photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+}
+
+/* Інформація про мене */
+.about-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* --- Адаптація --- */
+
+/* --- Адаптація --- */
+
+/* Адаптація для ноутбуків (від 768px до 1200px) */
+@media (max-width: 1200px) and (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .about-content {
+        flex-direction: row;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Адаптація для телефонів (до 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 15px;
+    }
+
+    .laba-tasks, .practical-tasks {
+        flex-direction: column;
+    }
+
+    .laba-task img, .practical-task img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .laba-task, .practical-task {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
