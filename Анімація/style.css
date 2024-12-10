@@ -1,0 +1,237 @@
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    font-family: sans-serif; 
+} 
+
+.back-button { 
+    padding: 8px 12px; 
+    background-color: rgb(70, 161, 221); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-size: 18px; 
+    width: 100px; 
+    height: 60px; 
+    min-width: 50px; 
+} 
+
+.back-button i { 
+    margin-right: 5px; 
+} 
+
+.back-button:hover { 
+    background-color: rgb(232, 186, 253); 
+} 
+
+.scene { 
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+} 
+
+.sky { 
+    background: linear-gradient(to bottom, #87CEEB, #ADD8E6); 
+    height: 70%; 
+    width: 100%; 
+    position: relative; 
+    overflow: hidden; 
+} 
+
+.ground { 
+    background: #7bf399; 
+    height: 30%; 
+    width: 100%; 
+    position: absolute; 
+    bottom: 0; 
+} 
+
+.cloud { 
+    position: absolute; 
+    background: #6358f3; 
+    border-radius: 50%; 
+    box-shadow: 30px 30px 0 0 #6057da, -30px 30px 0 0 #6057da; 
+    width: 100px; 
+    height: 50px; 
+    top: 10%; 
+    animation: float 10s linear infinite; 
+} 
+
+.cloud:nth-child(2) { 
+    top: 20%; 
+    left: 60%; 
+    animation-duration: 12s; 
+} 
+
+@keyframes float { 
+    from { 
+        transform: translateX(-150%); 
+    } 
+    to { 
+        transform: translateX(150%); 
+    } 
+} 
+
+.flying-pokemon { 
+    position: absolute; 
+    top: 30%; 
+    left: 0; 
+    width: 150px; 
+    height: 150px; 
+    background: url('https://img.pokemondb.net/sprites/x-y/normal/venusaur-f.png') no-repeat center; 
+    background-size: contain; 
+    animation: fly 8s linear infinite; 
+} 
+
+.flying-pokemon2 { 
+    position: absolute; 
+    top: 50%; 
+    right: 0; 
+    width: 150px; 
+    height: 150px; 
+    background: url('https://img.pokemondb.net/sprites/x-y/normal/fearow.png') no-repeat center; 
+    background-size: contain; 
+    animation: fly2 10s linear infinite; 
+} 
+
+@keyframes fly {
+    0% { 
+        transform: translateX(100vw) translateY(0) rotate(0deg); 
+    }
+    10% { 
+        transform: translateX(90vw) translateY(-30px) rotate(10deg); 
+    }
+    20% { 
+        transform: translateX(80vw) translateY(-50px) rotate(15deg); 
+    }
+    30% { 
+        transform: translateX(75vw) translateY(20px) rotate(0deg); 
+    }
+    40% { 
+        transform: translateX(60vw) translateY(50px) rotate(-15deg); 
+    }
+    50% { 
+        transform: translateX(55vw) translateY(-20px) rotate(-30deg); 
+    }
+    60% { 
+        transform: translateX(50vw) translateY(-100px) rotate(90deg); 
+    }
+    65% { 
+        transform: translateX(45vw) translateY(-70px) rotate(120deg); 
+    }
+    70% { 
+        transform: translateX(40vw) translateY(0) rotate(180deg); 
+    }
+    75% { 
+        transform: translateX(35vw) translateY(-30px) rotate(220deg); 
+    }
+    85% { 
+        transform: translateX(20vw) translateY(-50px) rotate(270deg); 
+    }
+    90% { 
+        transform: translateX(10vw) translateY(-20px) rotate(320deg); 
+    }
+    100% { 
+        transform: translateX(-150px) translateY(0) rotate(-360deg); 
+    }
+}
+
+@keyframes fly2 {
+    0% { 
+        transform: translateX(-100vw) translateY(0) rotate(0deg); 
+    }
+    10% { 
+        transform: translateX(-90vw) translateY(30px) rotate(-10deg); 
+    }
+    20% { 
+        transform: translateX(-80vw) translateY(50px) rotate(-15deg); 
+    }
+    30% { 
+        transform: translateX(-75vw) translateY(-20px) rotate(0deg); 
+    }
+    40% { 
+        transform: translateX(-60vw) translateY(-50px) rotate(15deg); 
+    }
+    50% { 
+        transform: translateX(-55vw) translateY(20px) rotate(30deg); 
+    }
+    60% { 
+        transform: translateX(-50vw) translateY(100px) rotate(-90deg); 
+    }
+    65% { 
+        transform: translateX(-45vw) translateY(70px) rotate(-120deg); 
+    }
+    70% { 
+        transform: translateX(-40vw) translateY(0) rotate(-180deg); 
+    }
+    75% { 
+        transform: translateX(-35vw) translateY(30px) rotate(-220deg); 
+    }
+    85% { 
+        transform: translateX(-20vw) translateY(50px) rotate(-270deg); 
+    }
+    90% { 
+        transform: translateX(-10vw) translateY(20px) rotate(-320deg); 
+    }
+    100% { 
+        transform: translateX(150px) translateY(0) rotate(360deg); 
+    }
+}
+
+@keyframes moveLeft { 
+    from { 
+        left: 100%; 
+    } 
+    to { 
+        left: -150px; 
+    } 
+} 
+
+.running-pikachu { 
+    position: absolute; 
+    bottom: 90px; 
+    left: 100%; 
+    width: 150px; 
+    height: 150px; 
+    background: url('https://img.pokemondb.net/sprites/black-white/anim/normal/eevee.gif') no-repeat center; 
+    background-size: contain; 
+    animation: moveLeft 20s linear infinite, run 2s infinite; 
+} 
+
+@keyframes run {
+    0% { 
+        transform: rotate(10deg) translateY(0); 
+    }
+    10% { 
+        transform: rotate(15deg) translateY(-10px); 
+    }
+    20% { 
+        transform: rotate(10deg) translateY(-20px); 
+    }
+    30% { 
+        transform: rotate(5deg) translateY(-10px); 
+    }
+    40% { 
+        transform: rotate(0deg) translateY(0); 
+    }
+    50% { 
+        transform: rotate(-10deg) translateY(-10px); 
+    }
+    60% { 
+        transform: rotate(-15deg) translateY(-20px); 
+    }
+    70% { 
+        transform: rotate(-10deg) translateY(-10px); 
+    }
+    80% { 
+        transform: rotate(-5deg) translateY(0); 
+    }
+    90% { 
+        transform: rotate(5deg) translateY(-10px); 
+    }
+    100% { 
+        transform: rotate(10deg) translateY(0); 
+    }
+}
